@@ -1,5 +1,6 @@
 /* Style sheet created by: Student's Robert Brennan, 5/5/17 */
 
+/* Styles for Mobile Layout */
 /* Style for body specifies a background color */
 body {
 	background-color: #0080ff;
@@ -7,9 +8,7 @@ body {
 
 img { 
 	max-width: 100%;
-}
-	
-/* Styles for Mobile Layout */
+}	
 
 /* Style for the container centers the page and specifies the width */
 #container {
@@ -64,14 +63,13 @@ nav li a {
 }
 
 nav li a:link {
-	color: #00ffed;
+	color: #00ffed;	
 }
 	
 nav li a:hover {
 	color: #00ffed;
 	box-shadow: .0em .4em 1em #ffffff;
-	transform: scale(1.1);
-}	
+}
 
 /* Style for the main specifies a block display, text properties, margins, padding, rounded corners, and borders  */
 main {
@@ -81,8 +79,27 @@ main {
 	padding: 0.5em;
 	margin: 0.5em;
 	border-radius: 1em;
-	background-color: #FFFFFF;
+	background-color: #e5f2ff;
 }
+
+#homePage main {	
+	background-color: #e5f2ff;
+	color: black;
+	margin: .1em;
+	border: 6px ridge #7fbfff;
+	border-radius: 1.5em;
+}
+
+#homePage h2 {
+	margin-top: auto;
+	color: #0066cc;
+}
+
+#homePage h3 {
+	text-align: center;
+	margin-top: -5px;
+}
+	
 
 /* Style for the footer specifies font size, text alignment, and top margin */
 footer {
@@ -92,18 +109,6 @@ footer {
 }
 
 /* Style displays the mobile class */
-.mobile {
-	display: inline;
-}
-
-.mobile h3 {
-	text-align: center;
-}
-
-article h3 {
-	text-align: center;
-}
-
 u { 
     text-decoration: underline;
 }
@@ -115,7 +120,7 @@ section h4 {
 article {
 	margin: 0.7em;
 	padding: 0.5em;
-	background-color: white;
+	background-color: #99ccff;
 }
 
 input, select, textarea {
@@ -125,11 +130,6 @@ input, select, textarea {
 
 label {
 	display: block;
-}
-
-/* Style hides the desktop class*/
-.desktop {
-	display: none;
 }
 
 form ul {
@@ -163,12 +163,17 @@ footer a {
 /*media query for tablet*/
 @media only screen and (min-width: 481px) {
 	
-	.mobile {
-		display: none;
+	main {	
+		background-color: #e5f2ff;
+		color: black;
+		margin: .1em;
+		border: 6px ridge #7fbfff;
+		border-radius: 1.5em;
+		box-shadow: 0.5em 0.5em 2em #331400;
 	}
-	
-	.desktop {
-		display: inline;
+
+	#homePage h2 {
+		color: #0066cc;
 	}
 	
     nav ul {
@@ -182,18 +187,7 @@ footer a {
 		padding: 0.3em 0.4em;
 		font-size: 1.25em;
 		border-radius: 0.5em;
-	}
-	
-	main {
-		text-align: center;
-		clear: left;
-		border: none;
-		border-radius: 1em;
-		box-shadow: 0.5em 0.5em 2em #331400;
-		margin-top: .8em;
-		margin-bottom: auto;
-		overflow: auto;
-	}
+	}	
 
 	label {
 		float: left;
@@ -217,25 +211,25 @@ footer a {
 		box-shadow: 0.5em 0.5em 2em #331400;
 		overflow: auto;
 	}
-
+	
+	section h2 {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+	}		
+	
 	section {
+		display: inline-flex; /*or inline-flex*/
+		justify-content: center;
+		align-items: stretch;
 		text-align: left;
-		margin-left: auto;
 	}
-	
-	section article {
-		margin-top: -15px;
-	}	
-	
 }
 
 /*Media query for desktop*/
 @media only screen and (min-width: 961px) { 
 
-	.mobile {
-		display: none;
-	}
-	
 	#container {
 		width: 95%;
 	}
@@ -254,15 +248,4 @@ footer a {
 		color: #00ffed;
 		transform: scale(1.1);
 	}	
-	
-	section {
-		margin-top: 1em;
-	}
-	
-	section article {
-		margin-left: 7.6em;
-		width: 25em; 
-		height: auto;
-		float: left;
-	}
-}
+}	
