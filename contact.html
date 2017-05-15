@@ -40,18 +40,18 @@
 		<h4>For more information about our services, please complete the form below.<h4><br>
 	
 	<div style="width:400px; margin-right:auto; margin-left:auto;">
-		<form>
+		<form name="myForm">
 			<label for="fName">First Name:</label>
 			<input type="text" name="fName" id="fName">
 			
-			<label for="1Name">Last Name:</label>
-			<input type="text" name="1Name" id="1Name">
+			<label for="lName">Last Name:</label>
+			<input type="text" name="lName" id="lName">
 			
 			<label for "email">Email Address:</label>
 			<input type="email" name="email" id="email">
 			
 			<label for "phone">Phone Number:</label>
-			<input type="tel" name="phone id="phone">
+			<input type="tel" name="phone" id="phone">
 		</form>
 	</div>
 			
@@ -68,13 +68,12 @@
 			<label for="questions">Questions:</label>
 			<textarea id="questions" name="questions" rows="5" cols="36"></textarea>
 			
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit" onclick="return(validate() + validateEmail()) ;">
 			<input type="reset" value="Reset">
 		</form>
 		
 		<h2>Call (555)555-5555 - Our email address is ADR@aol.net</h2>
 		
-			
 	</main>
 
 	<!-- Use the footer area to add webpage footer content -->
@@ -88,9 +87,10 @@
 			<p>Follow Us:</p>
 			<p><a href="http://www.facebook.com"><img src="images/facebook.png" alt="facebook logo"></a>
 			<a href="http://www.twitter.com"><img src="images/twitter.png" alt="twitter logo"></a>
+		</div>
 	</footer>
-
-	</div>
 	
+	</div>
+	<script src="adr.js"></script>
 </body>
 </html>
